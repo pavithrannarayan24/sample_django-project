@@ -1,0 +1,42 @@
+{% extends 'shop/layouts/main.html'%}
+{% block title%}
+Registration | shopKart
+        
+{% endblock title%}
+
+{% block content %}
+<div class="container" style="margin-top: 70px;">
+    <div class="row">
+        <h4 class="mb-3 text-left " style="color: black; font-weight: bold;">User login</h4>
+        <hr style="border-color:oldlace;">
+        {% include 'shop/inc/message.html' %}
+     
+    </div>
+    <section class="py-4 my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <form method="POST" action="">
+                        {% csrf_token %}
+                        <div class="mb-4">
+                            <label for="" class="form-label">Username</label>
+                            <input type="text" name="username" id="username" class="form-control" placeholder="Enter username">
+                        </div>
+                        <div class="mb-4">
+                            <label for="" class="form-label">Password</label>
+                            <input type="password" name="Password" id="Password" class="form-control" placeholder="enter password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">login</button>
+                    </form>
+                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+  
+    
+{% endblock content%}
